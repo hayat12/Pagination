@@ -3,20 +3,16 @@
         <div class="card-headr h5 text-center pt-4">
             {{title}}
         </div>
-        <!-- <div class="card-body">
-            <table class="table">
-                <tr *ngFor="let dat of data let i = index">
-                    <td>{{i+1}}</td>
-                    <td>{{dat}}</td>
-                </tr>
-            </table>
-        </div> -->
-
-        <!-- -->
+        <!-- <table class="table">
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table> -->
         <ul>
-            <li *ngFor="let item of collection | paginate: { itemsPerPage: 10, currentPage: p }"> {{item}} </li>
+            <li *ngFor="let item of collection | paginate: { itemsPerPage: 10, currentPage: p }">
+                    {{item.title}}
+            </li>
         </ul>
-
         <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </div>
 </div>

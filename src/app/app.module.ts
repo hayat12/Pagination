@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
+import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import {  NgxPaginationModule } from 'ngx-pagination';
 
@@ -11,6 +11,7 @@ import {  NgxPaginationModule } from 'ngx-pagination';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     NgxPaginationModule
   ],
   providers: [],
